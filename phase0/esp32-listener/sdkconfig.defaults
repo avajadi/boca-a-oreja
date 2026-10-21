@@ -1,0 +1,5 @@
+CONFIG_IDF_TARGET="esp32c6"
+# The AP delivers buffered frames in bursts to power-saving clients; a deeper UDP
+# receive queue keeps those bursts from being dropped inside lwIP and miscounted as
+# Wi-Fi loss.
+CONFIG_LWIP_UDP_RECVMBOX_SIZE=32

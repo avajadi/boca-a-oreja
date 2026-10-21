@@ -6,8 +6,9 @@
 booths, radio transmitters and rented headsets of a typical conference setup with a
 small hub in the room and an app on everyone's phone.
 
-> **Status: planning.** There is no code yet. This repository holds the concept and
-> the development plan; see [docs/PLAN.md](docs/PLAN.md).
+> **Status: Phase 0, feasibility testing.** There is no product code yet. This
+> repository holds the development plan ([docs/PLAN.md](docs/PLAN.md)) and the
+> tooling for the Phase 0 tests ([phase0/](phase0/README.md)).
 
 ## How it works
 
@@ -81,6 +82,7 @@ product code is written. The full phased plan, open decisions and risks are in
 | Path                            | Contents                                       |
 |---------------------------------|------------------------------------------------|
 | `docs/PLAN.md`, `docs/PLAN.pdf` | Development plan: architecture, phases, risks  |
+| `phase0/`                       | Tooling for the Phase 0 feasibility tests      |
 
 ## License
 

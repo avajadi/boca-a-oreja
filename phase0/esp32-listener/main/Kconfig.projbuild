@@ -1,0 +1,43 @@
+menu "Boca a Oreja listener"
+
+    config BAO_WIFI_SSID
+        string "Wi-Fi SSID"
+        default "BAO-TEST"
+        help
+            The hub's access point, as set up by hub/setup-ap.sh.
+
+    config BAO_WIFI_PASSWORD
+        string "Wi-Fi password"
+        default "boca-a-oreja"
+
+    config BAO_SERVER_IP
+        string "Hub IP address"
+        default "10.42.0.1"
+        help
+            Where hub/loadgen.py runs. 10.42.0.1 is the address NetworkManager gives
+            the hub in a shared-mode access point, which is what setup-ap.sh creates.
+
+    config BAO_SERVER_PORT
+        int "Hub UDP port"
+        default 5000
+
+    config BAO_REPORT_INTERVAL_MS
+        int "Report interval (ms)"
+        default 2000
+
+    config BAO_LATE_MS
+        int "Late threshold (ms)"
+        default 60
+        help
+            A packet delayed more than this beyond the recent minimum counts as late,
+            i.e. it would have missed its slot in a typical playout buffer.
+
+    config BAO_WIFI_POWER_SAVE
+        bool "Use Wi-Fi power save (like a phone)"
+        default y
+        help
+            Phones listening with the screen off use power save, which makes the AP
+            buffer their frames between beacons and adds delay. Leave on for a
+            realistic test; turn off to measure the radio on its own.
+
+endmenu
